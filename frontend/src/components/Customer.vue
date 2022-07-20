@@ -200,7 +200,7 @@
             async createAccount() {
                 try {
                     if(!this.offline) {
-                        var temp = await axios.put(axios.fixUrl(this.value._links.createAccount3.href))
+                        var temp = await axios.put(axios.fixUrl(this.value._links.createAccount4.href))
                         for(var k in temp.data) {
                             this.value[k]=temp.data[k];
                         }

@@ -14,8 +14,8 @@ public class CustomerHateoasProcessor
     public EntityModel<Customer> process(EntityModel<Customer> model) {
         model.add(
             Link
-                .of(model.getRequiredLink("self").getHref() + "/createAccount3")
-                .withRel("createAccount3")
+                .of(model.getRequiredLink("self").getHref() + "/createAccount4")
+                .withRel("createAccount4")
         );
 
         return model;

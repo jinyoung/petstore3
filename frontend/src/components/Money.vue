@@ -1,6 +1,6 @@
 <template>
 
-    <v-card outlined>
+    <div style="margin: 0 -15px 0 -15px;">
         <v-card-title>
             Money
         </v-card-title>
@@ -13,14 +13,16 @@
         <v-card-actions v-if="inList">
             <slot name="actions"></slot>
         </v-card-actions>
-    </v-card>
+    </div>
 </template>
 
 <script>
 
+
     export default {
         name: 'Money',
-        components:{},
+        components:{
+        },
         props: {
             value: [Object, String, Number, Boolean, Array],
             editMode: Boolean,
@@ -34,18 +36,12 @@
         async created() {
             if(!Object.values(this.value)[0]) {
                 this.$emit('input', {});
-                this.newValue = {
-                    'amount': '',
-                    'currency': '',
-                }
             }
-            if(typeof this.value === 'object') {
-                if(!('amount' in this.value)) {
-                    this.value.amount = 0;
-                }
-                if(!('currency' in this.value)) {
-                    this.value.currency = '';
-                }
+            if(!('amount' in this.value)) {
+                this.value.amount = 0;
+            }
+            if(!('currency' in this.value)) {
+                this.value.currency = '';
             }
         },
         watch: {

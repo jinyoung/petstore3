@@ -19,7 +19,7 @@ public class CustomerController {
     CustomerRepository customerRepository;
 
     @RequestMapping(
-        value = "customers/{id}/createAccount3",
+        value = "customers/{id}/createAccount4",
         method = RequestMethod.PUT,
         produces = "application/json;charset=UTF-8"
     )
