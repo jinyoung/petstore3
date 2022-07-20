@@ -40,13 +40,13 @@ public class Item {
     }
 
     public static void displayToTheShop(PetRegistered petRegistered) {
-        /** Example 1:  new item 
+        /** Example 1:  new item  */
         Item item = new Item();
         repository().save(item);
 
         ItemRegistered itemRegistered = new ItemRegistered(item);
         itemRegistered.publishAfterCommit();
-        */
+       
 
         /** Example 2:  finding and process
         
