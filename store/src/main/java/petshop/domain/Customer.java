@@ -47,7 +47,11 @@ public class Customer {
     }
 
     public void createAvatar() {}
+    
+    public void newAPI2() {
+    }
 
+    
     public void newApi() {
         NewApIed newApIed = new NewApIed(this);
         newApIed.publishAfterCommit();
