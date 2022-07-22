@@ -20,6 +20,8 @@ public class Customer {
     @Embedded
     private Address address;
 
+    private String field;
+
     @PostPersist
     public void onPostPersist() {}
 
@@ -32,19 +34,11 @@ public class Customer {
 
     public void createAccount() {}
 
-    public void deleteAccount() {
+    public void deleteAccount() {}
 
-        //impl
-    }
-
-    public void createAvatar() {
-        //ompl
-    }
     public void createAvatar() {}
 
-    public void test() {
+    public void test() {}
 
-
-        //test
-    }
+    public void tetsfsfd() {}
 }

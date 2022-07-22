@@ -69,6 +69,7 @@
                     { text: "id", value: "id" },
                     { text: "userId", value: "userId" },
                     { text: "address", value: "address" },
+                    { text: "field", value: "field" },
                 ],
             customer : [],
             newValue: {},
@@ -88,6 +89,7 @@
             this.newValue = {
                 'userId': '',
                 'address': {},
+                'field': '',
             }
         },
         methods: {
