@@ -2,7 +2,7 @@
 
     <v-card outlined>
         <v-card-title>
-            Tetsfsfd
+            CreateAvatar
         </v-card-title>
 
         <v-card-text>
@@ -13,9 +13,9 @@
             <v-btn
                     color="deep-purple lighten-2"
                     text
-                    @click="tetsfsfd"
+                    @click="createAvatar"
             >
-                Tetsfsfd
+                CreateAvatar
             </v-btn>
             
             <v-btn
@@ -33,7 +33,7 @@
 <script>
    
     export default {
-        name: 'TetsfsfdCommand',
+        name: 'CreateAvatarCommand',
         components:{},
         props: {},
         data: () => ({
@@ -45,8 +45,8 @@
         watch: {
         },
         methods: {
-            tetsfsfd() {
-                this.$emit('tetsfsfd', this.value);
+            createAvatar() {
+                this.$emit('createAvatar', this.value);
             },
             close() {
                 this.$emit('closeDialog');

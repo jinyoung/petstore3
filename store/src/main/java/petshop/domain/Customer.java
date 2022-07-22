@@ -32,13 +32,15 @@ public class Customer {
         return customerRepository;
     }
 
-    public void createAccount() {}
+    public void createAccount() {
+        AvatarCreated avatarCreated = new AvatarCreated(this);
+        avatarCreated.publishAfterCommit();
+    }
 
     public void deleteAccount() {
-
-//mychanges
-
         CustomerDeleted customerDeleted = new CustomerDeleted(this);
         customerDeleted.publishAfterCommit();
     }
+
+    public void createAvatar() {}
 }

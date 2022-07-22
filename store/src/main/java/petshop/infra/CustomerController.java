@@ -59,7 +59,6 @@ public class CustomerController {
         customerRepository.save(customer);
         return customer;
     }
-<<<<<<< HEAD
 
     @RequestMapping(
         value = "customers/{id}/createAvatar",
@@ -81,49 +80,5 @@ public class CustomerController {
         customerRepository.save(customer);
         return customer;
     }
-
-    @RequestMapping(
-        value = "customers/{id}/test",
-        method = RequestMethod.PUT,
-        produces = "application/json;charset=UTF-8"
-    )
-    public Customer test(
-        @PathVariable(value = "id") Long id,
-        HttpServletRequest request,
-        HttpServletResponse response
-    ) throws Exception {
-        System.out.println("##### /customer/test  called #####");
-        Optional<Customer> optionalCustomer = customerRepository.findById(id);
-
-        optionalCustomer.orElseThrow(() -> new Exception("No Entity Found"));
-        Customer customer = optionalCustomer.get();
-        customer.test();
-
-        customerRepository.save(customer);
-        return customer;
-    }
-
-    @RequestMapping(
-        value = "customers/{id}/estsefsf",
-        method = RequestMethod.PUT,
-        produces = "application/json;charset=UTF-8"
-    )
-    public Customer tetsfsfd(
-        @PathVariable(value = "id") Long id,
-        HttpServletRequest request,
-        HttpServletResponse response
-    ) throws Exception {
-        System.out.println("##### /customer/tetsfsfd  called #####");
-        Optional<Customer> optionalCustomer = customerRepository.findById(id);
-
-        optionalCustomer.orElseThrow(() -> new Exception("No Entity Found"));
-        Customer customer = optionalCustomer.get();
-        customer.tetsfsfd();
-
-        customerRepository.save(customer);
-        return customer;
-    }
-=======
->>>>>>> be917371c1747605ab3eeebe6637962eeeafe390
     // keep
 }
