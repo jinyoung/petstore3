@@ -42,5 +42,9 @@ public class Customer {
     }
     public void createAvatar() {}
 
-    public void test() {}
+    public void test() {
+
+
+        //test
+    }
 }
