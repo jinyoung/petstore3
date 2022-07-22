@@ -34,5 +34,9 @@ public class Customer {
 
     public void deleteAccount() {}
 
-    public void createAvatar() {}
+    public void createAvatar() {
+
+        System.out.println("why this is removed?");
+
+    }
 }
