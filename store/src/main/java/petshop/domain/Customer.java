@@ -38,6 +38,10 @@ public class Customer {
     }
 
     public void deleteAccount() {
+
+///다시시도
+
+
         CustomerDeleted customerDeleted = new CustomerDeleted(this);
         customerDeleted.publishAfterCommit();
     }
