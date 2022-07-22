@@ -34,11 +34,8 @@ public class Customer {
 
     public void createAccount() {}
 
-    public void deleteAccount() {}
-
-    public void createAvatar() {}
-
-    public void test() {}
-
-    public void tetsfsfd() {}
+    public void deleteAccount() {
+        CustomerDeleted customerDeleted = new CustomerDeleted(this);
+        customerDeleted.publishAfterCommit();
+    }
 }

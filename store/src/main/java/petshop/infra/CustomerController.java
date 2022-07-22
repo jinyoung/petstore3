@@ -59,6 +59,7 @@ public class CustomerController {
         customerRepository.save(customer);
         return customer;
     }
+<<<<<<< HEAD
 
     @RequestMapping(
         value = "customers/{id}/createAvatar",
@@ -122,5 +123,7 @@ public class CustomerController {
         customerRepository.save(customer);
         return customer;
     }
+=======
+>>>>>>> be917371c1747605ab3eeebe6637962eeeafe390
     // keep
 }

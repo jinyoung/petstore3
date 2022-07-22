@@ -22,6 +22,7 @@ public class CustomerHateoasProcessor
                 .of(model.getRequiredLink("self").getHref() + "/deleteAccount")
                 .withRel("deleteAccount")
         );
+<<<<<<< HEAD
         model.add(
             Link
                 .of(model.getRequiredLink("self").getHref() + "/createAvatar")
@@ -37,6 +38,8 @@ public class CustomerHateoasProcessor
                 .of(model.getRequiredLink("self").getHref() + "/estsefsf")
                 .withRel("estsefsf")
         );
+=======
+>>>>>>> be917371c1747605ab3eeebe6637962eeeafe390
 
         return model;
     }

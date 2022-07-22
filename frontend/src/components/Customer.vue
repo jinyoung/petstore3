@@ -76,6 +76,7 @@
             >
                 DeleteAccount
             </v-btn>
+<<<<<<< HEAD
             <v-btn
                     v-if="!editMode"
                     color="deep-purple lighten-2"
@@ -100,6 +101,8 @@
             >
                 Tetsfsfd
             </v-btn>
+=======
+>>>>>>> be917371c1747605ab3eeebe6637962eeeafe390
         </v-card-actions>
 
         <v-snackbar
@@ -260,6 +263,7 @@
                     this.snackbar.text = e
                 }
             },
+<<<<<<< HEAD
             async createAvatar() {
                 try {
                     if(!this.offline) {
@@ -305,6 +309,8 @@
                     this.snackbar.text = e
                 }
             },
+=======
+>>>>>>> be917371c1747605ab3eeebe6637962eeeafe390
         },
     }
 </script>
