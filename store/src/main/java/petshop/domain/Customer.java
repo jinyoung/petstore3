@@ -32,7 +32,12 @@ public class Customer {
 
     public void createAccount() {}
 
-    public void deleteAccount() {}
+    public void deleteAccount() {
 
-    public void createAvatar() {}
+        //impl
+    }
+
+    public void createAvatar() {
+        //ompl
+    }
 }
