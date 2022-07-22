@@ -32,8 +32,7 @@ public class Customer {
 
     public void createAccount() {}
 
-    public void deleteAccount() {
+    public void deleteAccount() {}
 
-        System.out.println("test");
-    }
+    public void createAvatar() {}
 }
