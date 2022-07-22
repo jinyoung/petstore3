@@ -19,8 +19,13 @@ public class CustomerHateoasProcessor
         );
         model.add(
             Link
-                .of(model.getRequiredLink("self").getHref() + "/deleteAccount_")
-                .withRel("deleteAccount_")
+                .of(model.getRequiredLink("self").getHref() + "/deleteAccount")
+                .withRel("deleteAccount")
+        );
+        model.add(
+            Link
+                .of(model.getRequiredLink("self").getHref() + "/createAvatar")
+                .withRel("createAvatar")
         );
 
         return model;
