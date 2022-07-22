@@ -31,4 +31,6 @@ public class Customer {
     }
 
     public void createAccount() {}
+
+    public void deleteAccount() {}
 }

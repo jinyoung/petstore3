@@ -1,12 +1,20 @@
-package petshop.event;
+package petshop.domain;
 
-public class PetRegisteredEvent {
+import java.util.Date;
+import petshop.domain.*;
+import petshop.infra.AbstractEvent;
+
+public class PetRegistered extends AbstractEvent {
 
     private Long id;
     private String name;
     private int appearance;
     private int energy;
     private String address;
+
+    public PetRegistered() {
+        super();
+    }
 
     public Long getId() {
         return id;

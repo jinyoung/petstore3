@@ -17,6 +17,11 @@ public class CustomerHateoasProcessor
                 .of(model.getRequiredLink("self").getHref() + "/createAccount4")
                 .withRel("createAccount4")
         );
+        model.add(
+            Link
+                .of(model.getRequiredLink("self").getHref() + "/deleteAccount_")
+                .withRel("deleteAccount_")
+        );
 
         return model;
     }

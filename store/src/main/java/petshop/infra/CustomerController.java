@@ -38,5 +38,26 @@ public class CustomerController {
         customerRepository.save(customer);
         return customer;
     }
+
+    @RequestMapping(
+        value = "customers/{id}/deleteAccount_",
+        method = RequestMethod.PUT,
+        produces = "application/json;charset=UTF-8"
+    )
+    public Customer deleteAccount(
+        @PathVariable(value = "id") Long id,
+        HttpServletRequest request,
+        HttpServletResponse response
+    ) throws Exception {
+        System.out.println("##### /customer/deleteAccount  called #####");
+        Optional<Customer> optionalCustomer = customerRepository.findById(id);
+
+        optionalCustomer.orElseThrow(() -> new Exception("No Entity Found"));
+        Customer customer = optionalCustomer.get();
+        customer.deleteAccount();
+
+        customerRepository.save(customer);
+        return customer;
+    }
     // keep
 }
