@@ -38,12 +38,14 @@ public class Customer {
     }
 
     public void deleteAccount() {
-
-        //my change
-        
         CustomerDeleted customerDeleted = new CustomerDeleted(this);
         customerDeleted.publishAfterCommit();
     }
 
     public void createAvatar() {}
+
+    public void newApi() {
+        NewApIed newApIed = new NewApIed(this);
+        newApIed.publishAfterCommit();
+    }
 }
