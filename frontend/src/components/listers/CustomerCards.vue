@@ -72,6 +72,7 @@
             me.newValue = {
                 'userId': '',
                 'address': {},
+                'field': '',
             }
         },
         methods:{
@@ -102,7 +103,7 @@
                     this.values.splice(i, 1);
                     this.$emit('input', this.values);
                 }
-            }
+            },
         }
     };
 </script>

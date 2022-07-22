@@ -19,6 +19,7 @@
         <v-card-text>
             <String label="UserId" v-model="value.userId" :editMode="editMode"/>
             <Address offline label="Address" v-model="value.address" :editMode="editMode" @change="change"/>
+            <String label="Field" v-model="value.field" :editMode="editMode"/>
 
         </v-card-text>
 
@@ -75,34 +76,6 @@
             >
                 DeleteAccount
             </v-btn>
-            <v-btn
-                    v-if="!editMode"
-                    color="deep-purple lighten-2"
-                    text
-                    @click="createAvatar"
-            >
-                CreateAvatar
-            </v-btn>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> edd2c5b95c22555b6e21e9df9116310457c097f7
-            <v-btn
-                    v-if="!editMode"
-                    color="deep-purple lighten-2"
-                    text
-                    @click="test"
-            >
-                Test
-            </v-btn>
-<<<<<<< HEAD
->>>>>>> 5f46f40ee4c8079ee3d89f3af450924b93da2a86
-=======
->>>>>>> 9c3dc2d99650e94bf93e38560ee7cdcaf6942b32
-=======
->>>>>>> edd2c5b95c22555b6e21e9df9116310457c097f7
         </v-card-actions>
 
         <v-snackbar
@@ -252,48 +225,6 @@
                 try {
                     if(!this.offline) {
                         var temp = await axios.put(axios.fixUrl(this.value._links.deleteAccount.href))
-                        for(var k in temp.data) {
-                            this.value[k]=temp.data[k];
-                        }
-                    }
-
-                    this.editMode = false;
-                } catch(e) {
-                    this.snackbar.status = true
-                    this.snackbar.text = e
-                }
-            },
-            async createAvatar() {
-                try {
-                    if(!this.offline) {
-                        var temp = await axios.put(axios.fixUrl(this.value._links.createAvatar.href))
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> edd2c5b95c22555b6e21e9df9116310457c097f7
-                        for(var k in temp.data) {
-                            this.value[k]=temp.data[k];
-                        }
-                    }
-
-                    this.editMode = false;
-                } catch(e) {
-                    this.snackbar.status = true
-                    this.snackbar.text = e
-                }
-            },
-            async test() {
-                try {
-                    if(!this.offline) {
-                        var temp = await axios.put(axios.fixUrl(this.value._links.test.href))
-<<<<<<< HEAD
->>>>>>> 5f46f40ee4c8079ee3d89f3af450924b93da2a86
-=======
->>>>>>> 9c3dc2d99650e94bf93e38560ee7cdcaf6942b32
-=======
->>>>>>> edd2c5b95c22555b6e21e9df9116310457c097f7
                         for(var k in temp.data) {
                             this.value[k]=temp.data[k];
                         }
