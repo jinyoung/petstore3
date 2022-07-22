@@ -83,6 +83,17 @@
             >
                 CreateAvatar
             </v-btn>
+<<<<<<< HEAD
+=======
+            <v-btn
+                    v-if="!editMode"
+                    color="deep-purple lighten-2"
+                    text
+                    @click="test"
+            >
+                Test
+            </v-btn>
+>>>>>>> 5f46f40ee4c8079ee3d89f3af450924b93da2a86
         </v-card-actions>
 
         <v-snackbar
@@ -247,6 +258,24 @@
                 try {
                     if(!this.offline) {
                         var temp = await axios.put(axios.fixUrl(this.value._links.createAvatar.href))
+<<<<<<< HEAD
+=======
+                        for(var k in temp.data) {
+                            this.value[k]=temp.data[k];
+                        }
+                    }
+
+                    this.editMode = false;
+                } catch(e) {
+                    this.snackbar.status = true
+                    this.snackbar.text = e
+                }
+            },
+            async test() {
+                try {
+                    if(!this.offline) {
+                        var temp = await axios.put(axios.fixUrl(this.value._links.test.href))
+>>>>>>> 5f46f40ee4c8079ee3d89f3af450924b93da2a86
                         for(var k in temp.data) {
                             this.value[k]=temp.data[k];
                         }

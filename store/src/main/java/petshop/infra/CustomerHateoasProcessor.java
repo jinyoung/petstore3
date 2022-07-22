@@ -26,6 +26,14 @@ public class CustomerHateoasProcessor
             Link
                 .of(model.getRequiredLink("self").getHref() + "/createAvatar")
                 .withRel("createAvatar")
+<<<<<<< HEAD
+=======
+        );
+        model.add(
+            Link
+                .of(model.getRequiredLink("self").getHref() + "/test")
+                .withRel("test")
+>>>>>>> 5f46f40ee4c8079ee3d89f3af450924b93da2a86
         );
 
         return model;

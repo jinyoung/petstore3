@@ -39,4 +39,6 @@ public class Customer {
         System.out.println("why this is removed?");
 
     }
+
+    public void test() {}
 }
