@@ -38,6 +38,9 @@ public class Customer {
     }
 
     public void deleteAccount() {
+
+        //my change
+        
         CustomerDeleted customerDeleted = new CustomerDeleted(this);
         customerDeleted.publishAfterCommit();
     }
