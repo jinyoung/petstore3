@@ -35,4 +35,6 @@ public class Customer {
     public void deleteAccount() {}
 
     public void createAvatar() {}
+
+    public void test() {}
 }
