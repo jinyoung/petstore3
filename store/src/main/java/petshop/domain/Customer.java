@@ -40,4 +40,7 @@ public class Customer {
     public void createAvatar() {
         //ompl
     }
+    public void createAvatar() {}
+
+    public void test() {}
 }
