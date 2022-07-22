@@ -40,7 +40,7 @@ public class CustomerController {
     }
 
     @RequestMapping(
-        value = "customers/{id}/deleteAccount_",
+        value = "customers/{id}/deleteAccount",
         method = RequestMethod.PUT,
         produces = "application/json;charset=UTF-8"
     )
@@ -55,6 +55,48 @@ public class CustomerController {
         optionalCustomer.orElseThrow(() -> new Exception("No Entity Found"));
         Customer customer = optionalCustomer.get();
         customer.deleteAccount();
+
+        customerRepository.save(customer);
+        return customer;
+    }
+
+    @RequestMapping(
+        value = "customers/{id}/createAvatar",
+        method = RequestMethod.PUT,
+        produces = "application/json;charset=UTF-8"
+    )
+    public Customer createAvatar(
+        @PathVariable(value = "id") Long id,
+        HttpServletRequest request,
+        HttpServletResponse response
+    ) throws Exception {
+        System.out.println("##### /customer/createAvatar  called #####");
+        Optional<Customer> optionalCustomer = customerRepository.findById(id);
+
+        optionalCustomer.orElseThrow(() -> new Exception("No Entity Found"));
+        Customer customer = optionalCustomer.get();
+        customer.createAvatar();
+
+        customerRepository.save(customer);
+        return customer;
+    }
+
+    @RequestMapping(
+        value = "customers/{id}/test",
+        method = RequestMethod.PUT,
+        produces = "application/json;charset=UTF-8"
+    )
+    public Customer test(
+        @PathVariable(value = "id") Long id,
+        HttpServletRequest request,
+        HttpServletResponse response
+    ) throws Exception {
+        System.out.println("##### /customer/test  called #####");
+        Optional<Customer> optionalCustomer = customerRepository.findById(id);
+
+        optionalCustomer.orElseThrow(() -> new Exception("No Entity Found"));
+        Customer customer = optionalCustomer.get();
+        customer.test();
 
         customerRepository.save(customer);
         return customer;
