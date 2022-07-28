@@ -92,4 +92,6 @@ public class Pet {
     public void speak() {}
 
     public void feed() {}
+    
+    public void test(){}
 }
