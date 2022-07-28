@@ -20,6 +20,7 @@ public class Pet {
     private int appearance;
 
     private int energy;
+    private int weight;
 
     @Embedded
     private Address address;
@@ -99,4 +100,6 @@ public class Pet {
     }
     
     public void test(){}
+    
+    public void test2(){}
 }
