@@ -89,10 +89,14 @@ public class Pet {
 
     public void sleep() {}
 
-    public void speak() {}
+    public void speak() {
+        //impl2
+    }
 
     public void feed() {
 
         //impl
     }
+    
+    public void test(){}
 }
